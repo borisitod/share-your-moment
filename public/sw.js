@@ -1,4 +1,4 @@
-var CACHE_STATIC_NAME = 'static-v15' ;
+var CACHE_STATIC_NAME = 'static-v16' ;
 var CACHE_DYNAMIC_NAME = 'dynamic-v8' ;
 var STATIC_FILES = [
     '/',
@@ -70,7 +70,7 @@ function isInArray(string, array) {
 }
 
 self.addEventListener('fetch', function(event) {
-    var url = 'https://httpbin.org/get';
+    var url = 'https://pwagram-49076.firebaseio.com/posts.json';
 
     if (event.request.url.indexOf(url) > -1) {
         event.respondWith(
