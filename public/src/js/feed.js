@@ -125,6 +125,27 @@ if ('indexedDB' in window) {
         });
 }
 
+function sendData() {
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            id: new Date().toISOString(),
+            title: titleInput.value,
+            location: locationInput.value,
+            image: 'https://firebasestorage.googleapis.com/v0/b' +
+            '/pwagram-49076.appspot.com/o/Uptown%20Melbourn%20AU%20from%20ship.jpg?alt=media&token=c10de4f1-fd50-43e4-a762-cf2d44b36d33'
+        })
+    })
+        .then(function (res) {
+            console.log('Send data' + res);
+            updateUI();
+        })
+}
+
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -137,10 +158,27 @@ form.addEventListener('submit', function(event) {
 
     if ('serviceWorker' in navigator && 'SyncManager' in window) {
         navigator.serviceWorker.ready
-            .then (function (sw) {
-               sw.sync.register('sync-new-post');
-
+            .then(function(sw) {
+                var post = {
+                    id: new Date().toISOString(),
+                    title: titleInput.value,
+                    location: locationInput.value
+                };
+                writeData('sync-posts', post)
+                    .then(function() {
+                        return sw.sync.register('sync-new-posts');
+                    })
+                    .then(function() {
+                        var snackbarContainer = document.querySelector('#confirmation-toast');
+                        var data = {message: 'Your Post was saved for syncing!'};
+                        snackbarContainer.MaterialSnackbar.showSnackbar(data);
+                    })
+                    .catch(function(err) {
+                        console.log(err);
+                    });
             });
+    } else {
+        sendData();
     }
 
 });
