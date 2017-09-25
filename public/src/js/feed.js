@@ -2,12 +2,15 @@ var shareImageButton = document.querySelector('#share-image-button');
 var createPostArea = document.querySelector('#create-post');
 var closeCreatePostModalButton = document.querySelector('#close-create-post-modal-btn');
 var sharedMomentsArea = document.querySelector('#shared-moments');
+var form = document.querySelector('form');
+var titleInput = document.querySelector('#title');
+var locationInput = document.querySelector('#location');
 
 function openCreatePostModal() {
     // createPostArea.style.display = 'block';
-    // setTimeout(function () {
-        createPostArea.style.transform = 'translateY(0)';
-    // }, 1)
+    // setTimeout(function() {
+    createPostArea.style.transform = 'translateY(0)';
+    // }, 1);
     if (deferredPrompt) {
         deferredPrompt.prompt();
 
@@ -25,38 +28,38 @@ function openCreatePostModal() {
     }
 
     // if ('serviceWorker' in navigator) {
-    //     navigator.serviceWorker.getRegistrations()
-    //         .then(function (registrations) {
-    //             for (var i=0;i < registrations.length; i++) {
-    //                 registrations[i].unregister();
-    //             }
-    //         })
+    //   navigator.serviceWorker.getRegistrations()
+    //     .then(function(registrations) {
+    //       for (var i = 0; i < registrations.length; i++) {
+    //         registrations[i].unregister();
+    //       }
+    //     })
     // }
 }
 
-function closeCreatePostModal(event) {
+function closeCreatePostModal() {
     createPostArea.style.transform = 'translateY(100vh)';
-   // createPostArea.style.display = 'none';
+    // createPostArea.style.display = 'none';
 }
 
 shareImageButton.addEventListener('click', openCreatePostModal);
 
 closeCreatePostModalButton.addEventListener('click', closeCreatePostModal);
 
-// Currently not in used
-function onSaveButtonClicked () {
-    console.log('button clicked')
+// Currently not in use, allows to save assets in cache on demand otherwise
+function onSaveButtonClicked(event) {
+    console.log('clicked');
     if ('caches' in window) {
         caches.open('user-requested')
-            .then(function (cache) {
+            .then(function(cache) {
                 cache.add('https://httpbin.org/get');
                 cache.add('/src/images/sf-boat.jpg');
-            })
+            });
     }
 }
 
 function clearCards() {
-    while (sharedMomentsArea.hasChildNodes()) {
+    while(sharedMomentsArea.hasChildNodes()) {
         sharedMomentsArea.removeChild(sharedMomentsArea.lastChild);
     }
 }
@@ -80,7 +83,7 @@ function createCard(data) {
     cardSupportingText.textContent = data.location;
     cardSupportingText.style.textAlign = 'center';
     // var cardSaveButton = document.createElement('button');
-    // cardSaveButton.textContent = 'save';
+    // cardSaveButton.textContent = 'Save';
     // cardSaveButton.addEventListener('click', onSaveButtonClicked);
     // cardSupportingText.appendChild(cardSaveButton);
     cardWrapper.appendChild(cardSupportingText);
@@ -98,14 +101,13 @@ function updateUI(data) {
 var url = 'https://pwagram-49076.firebaseio.com/posts.json';
 var networkDataReceived = false;
 
-
 fetch(url)
     .then(function(res) {
         return res.json();
     })
     .then(function(data) {
         networkDataReceived = true;
-        console.log('From web', data)
+        console.log('From web', data);
         var dataArray = [];
         for (var key in data) {
             dataArray.push(data[key]);
@@ -114,13 +116,31 @@ fetch(url)
     });
 
 if ('indexedDB' in window) {
-   readAllData('posts')
-       .then(function (data) {
-           if (!networkDataReceived) {
-               console.log('From Cache', data);
-               updateUI(data);
-           }
-       })
+    readAllData('posts')
+        .then(function(data) {
+            if (!networkDataReceived) {
+                console.log('From cache', data);
+                updateUI(data);
+            }
+        });
 }
 
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
+    if (titleInput.value.trim() === '' || locationInput.value.trim() === '') {
+        alert('Please enter valid data!');
+        return;
+    }
+
+    closeCreatePostModal();
+
+    if ('serviceWorker' in navigator && 'SyncManager' in window) {
+        navigator.serviceWorker.ready
+            .then (function (sw) {
+               sw.sync.register('sync-new-post');
+
+            });
+    }
+
+});
