@@ -71,7 +71,7 @@ function createCard(data) {
     cardTitle.className = 'mdl-card__title';
     cardTitle.style.backgroundImage = 'url(' + data.image + ')';
     cardTitle.style.backgroundSize = 'cover';
-    cardTitle.style.height = '180px';
+    //cardTitle.style.height = '180px';
     cardWrapper.appendChild(cardTitle);
     var cardTitleTextElement = document.createElement('h2');
     cardTitleTextElement.style.color = 'white';
@@ -126,7 +126,7 @@ if ('indexedDB' in window) {
 }
 
 function sendData() {
-    fetch(url, {
+    fetch('https://us-central1-pwagram-49076.cloudfunctions.net/storePostData', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
