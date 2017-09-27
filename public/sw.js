@@ -1,9 +1,10 @@
-
 importScripts('/src/js/idb.js');
 importScripts('/src/js/utility.js');
 
-var CACHE_STATIC_NAME = 'static-v23' ;
-var CACHE_DYNAMIC_NAME = 'dynamic-v8' ;
+
+var CACHE_STATIC_NAME = 'static-v24';
+var CACHE_DYNAMIC_NAME = 'dynamic-v8';
+
 var STATIC_FILES = [
     '/',
     '/index.html',
@@ -36,7 +37,7 @@ var STATIC_FILES = [
 // }
 
 
-self.addEventListener('install', function(event) {
+self.addEventListener('install', function (event) {
     console.log('[Service Worker] Innstalling the Service Worker', event);
     event.waitUntil(
         caches.open(CACHE_STATIC_NAME)
@@ -47,7 +48,7 @@ self.addEventListener('install', function(event) {
     )
 });
 
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', function (event) {
     console.log('[Service Worker] Activating the Service Worker', event);
     event.waitUntil(
         caches.keys()
@@ -74,7 +75,7 @@ function isInArray(string, array) {
     return array.indexOf(cachePath) > -1;
 }
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', function (event) {
     var url = 'https://pwagram-49076.firebaseio.com/posts';
 
     if (event.request.url.indexOf(url) > -1) {
@@ -83,7 +84,7 @@ self.addEventListener('fetch', function(event) {
                 var clonedRes = res.clone();
                 clearAllData('posts')
                     .then(function () {
-                         return clonedRes.json()
+                        return clonedRes.json()
                     })
                     .then(function (data) {
                         for (var key in data) {
@@ -124,5 +125,46 @@ self.addEventListener('fetch', function(event) {
                     }
                 })
         );
+    }
+})
+
+self.addEventListener('sync', function (event) {
+    console.log('[ServiceWorker] Background syncing!', event);
+    if (event.tag === 'sync-new-posts') {
+        console.log('[ServiceWorker] Syncing new Posts');
+        event.waitUntil(
+            readAllData('sync-posts')
+                .then(function (data) {
+                    for (var dt of data) {
+                        fetch('https://us-central1-pwagram-49076.cloudfunctions.net/storePostData', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Access-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                id: dt.id,
+                                title: dt.title,
+                                location: dt.location,
+                                image: 'https://firebasestorage.googleapis.com/v0/b' +
+                                '/pwagram-49076.appspot.com/o/Uptown%20Melbourn%20AU%20from%20ship.jpg?alt=media&token=c10de4f1-fd50-43e4-a762-cf2d44b36d33'
+                            })
+                        })
+                        .then(function (res) {
+                            console.log('Send data', res);
+                            if (res.ok) {
+                                res.json()
+                                    .then(function (resData) {
+                                        deleteItemFromData('sync-posts', resData.id);
+                                    })
+                            }
+                        })
+                        .catch(function (err) {
+                            console.log('Error while sending data', err);
+                        })
+                    }
+                })
+        )
+
     }
 })
