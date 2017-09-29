@@ -1,3 +1,4 @@
 node_modules
 /functions/node_modules
 /functions/pwagram-fb-key.json
+.idea/workspace.xml
