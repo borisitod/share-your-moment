@@ -49,18 +49,25 @@ function displayConfirmationNotification() {
 
 }
 
+function configurePushSub(){
+    if (!('serviceWorker') in navigator) {
+        return;
+    }
+}
+
 function askForNotificationPermission() {
     Notification.requestPermission(function (result) {
         console.log('User Choice', result);
         if (result !== 'granted') {
             console.log('No notification permission granted');
         } else {
-            displayConfirmationNotification();
+            configurePushSub();
+            //displayConfirmationNotification();
         }
     })
 }
 
-if ('Notification' in window) {
+if ('Notification' in window && 'serviceWorker' in navigator) {
     for ( var i = 0; i < enableNotificationButtons.length; i++) {
         enableNotificationButtons[i].style.display = 'inline-block';
         enableNotificationButtons[i].addEventListener('click', askForNotificationPermission);
