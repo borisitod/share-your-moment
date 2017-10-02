@@ -7,9 +7,10 @@ var titleInput = document.querySelector('#title');
 var locationInput = document.querySelector('#location');
 var videoPlayer = document.querySelector('#player');
 var canvasElement = document.querySelector('#canvas');
-var captureButton = document.querySelector('#capture-button');
+var captureButton = document.querySelector('#capture-btn');
 var imagePicker = document.querySelector('#image-picker');
 var imagePickerArea = document.querySelector('#pick-image');
+var picture;
 
 function initializeMedia() {
     if (!('mediaDevices' in navigator)) {
@@ -39,6 +40,18 @@ function initializeMedia() {
             imagePickerArea.style.display = "block";
         })
 }
+
+captureButton.addEventListener('click', function (event) {
+    canvasElement.style.display = 'block';
+    videoPlayer.style.display = 'none';
+    captureButton.style.display = 'none';
+    var context = canvasElement.getContext('2d');
+    context.drawImage(videoPlayer, 0, 0, canvas.width, videoPlayer.videoHeight / (videoPlayer.videoWidth / canvas.width));
+    videoPlayer.srcObject.getVideoTracks().forEach(function (track) {
+        track.stop();
+    });
+    picture = dataURItoBlob(canvasElement.toDataURL());
+})
 
 
 function openCreatePostModal() {
@@ -165,19 +178,16 @@ if ('indexedDB' in window) {
 }
 
 function sendData() {
+    var id = new Date().toISOString();
+    var postData = new FormData();
+    postData.append('id',   id);
+    postData.append('title',  titleInput.title);
+    postData.append('location',  locationInput.location);
+    postData.append('file',  picture, id + '.png');
+
     fetch('https://us-central1-pwagram-49076.cloudfunctions.net/storePostData', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            id: new Date().toISOString(),
-            title: titleInput.value,
-            location: locationInput.value,
-            image: 'https://firebasestorage.googleapis.com/v0/b' +
-            '/pwagram-49076.appspot.com/o/Uptown%20Melbourn%20AU%20from%20ship.jpg?alt=media&token=c10de4f1-fd50-43e4-a762-cf2d44b36d33'
-        })
+        body: postData
     })
         .then(function (res) {
             console.log('Send data' + res);
@@ -201,7 +211,8 @@ form.addEventListener('submit', function(event) {
                 var post = {
                     id: new Date().toISOString(),
                     title: titleInput.value,
-                    location: locationInput.value
+                    location: locationInput.value,
+                    picture: picture
                 };
                 writeData('sync-posts', post)
                     .then(function() {

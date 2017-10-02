@@ -2,7 +2,7 @@ importScripts('/src/js/idb.js');
 importScripts('/src/js/utility.js');
 
 
-var CACHE_STATIC_NAME = 'static-v28';
+var CACHE_STATIC_NAME = 'static-v31';
 var CACHE_DYNAMIC_NAME = 'dynamic-v8';
 
 var STATIC_FILES = [
@@ -10,6 +10,7 @@ var STATIC_FILES = [
     '/index.html',
     '/offline.html',
     '/src/js/app.js',
+    '/src/js/utility.js',
     '/src/js/feed.js',
     '/src/js/idb.js',
     '/src/js/promise.js',
@@ -136,19 +137,15 @@ self.addEventListener('sync', function (event) {
             readAllData('sync-posts')
                 .then(function (data) {
                     for (var dt of data) {
+                        var postData = new FormData();
+                        postData.append('id',  dt.id);
+                        postData.append('title',  dt.title);
+                        postData.append('location',  dt.location);
+                        postData.append('file',  dt.picture, dt.id + '.png');
+
                         fetch('https://us-central1-pwagram-49076.cloudfunctions.net/storePostData', {
                             method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'Access-Type': 'application/json',
-                            },
-                            body: JSON.stringify({
-                                id: dt.id,
-                                title: dt.title,
-                                location: dt.location,
-                                image: 'https://firebasestorage.googleapis.com/v0/b' +
-                                '/pwagram-49076.appspot.com/o/Uptown%20Melbourn%20AU%20from%20ship.jpg?alt=media&token=c10de4f1-fd50-43e4-a762-cf2d44b36d33'
-                            })
+                            body: postData
                         })
                         .then(function (res) {
                             console.log('Send data', res);
