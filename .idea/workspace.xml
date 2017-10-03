@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="279dd936-bc7c-4b5c-9bb9-4c8d34d74c7b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/service-worker.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/src/js/app.js" afterPath="$PROJECT_DIR$/public/src/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workbox-cli-config.js" afterPath="$PROJECT_DIR$/workbox-cli-config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sw-base.js" afterPath="$PROJECT_DIR$/public/sw-base.js" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,9 +31,16 @@
       <file leaf-file-name="service-worker.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/service-worker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-323">
-              <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-              <folding />
+            <state relative-caret-position="-187">
+              <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+              <folding>
+                <marker date="1507002966780" expanded="true" signature="2122:2127" ph="{&quot;url&quot;: &quot;sw-base.js&quot;...}" />
+                <marker date="1507002966780" expanded="true" signature="2122:2712" ph="[...]" />
+                <marker date="1507002966780" expanded="true" signature="2131:2207" ph="{&quot;url&quot;: &quot;sw.js&quot;...}" />
+                <marker date="1507002966780" expanded="true" signature="2211:2307" ph="{&quot;url&quot;: &quot;workbox-sw.prod.v2.0.3.js&quot;...}" />
+                <marker date="1507002966780" expanded="true" signature="2311:2410" ph="{&quot;url&quot;: &quot;src/images/main-image-lg.jpg&quot;...}" />
+                <marker date="1507002966780" expanded="true" signature="2414:2513" ph="{&quot;url&quot;: &quot;src/images/main-image-sm.jpg&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,43 +65,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workbox-sw.prod.v2.0.3.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/workbox-sw.prod.v2.0.3.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1666">
-              <caret line="98" column="14" lean-forward="false" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
+            <state relative-caret-position="187">
+              <caret line="11" column="108" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="108" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/src/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sw-base.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sw-base.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/sw-base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            <state relative-caret-position="221">
+              <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -147,8 +139,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/workbox-cli-config.js" />
         <option value="$PROJECT_DIR$/public/service-worker.js" />
-        <option value="$PROJECT_DIR$/public/sw-base.js" />
         <option value="$PROJECT_DIR$/public/src/js/app.js" />
+        <option value="$PROJECT_DIR$/public/sw-base.js" />
       </list>
     </option>
   </component>
@@ -269,12 +261,12 @@
       <workItem from="1506506772647" duration="1835000" />
       <workItem from="1506651310710" duration="823000" />
       <workItem from="1506818906391" duration="12345000" />
-      <workItem from="1506988526729" duration="9093000" />
+      <workItem from="1506988526729" duration="9387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67703000" />
+    <option name="totallyTimeSpent" value="67997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -635,14 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workbox-cli-config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/workbox-sw.prod.v2.0.3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -653,34 +637,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/sw-base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/service-worker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-          <folding />
+        <state relative-caret-position="-187">
+          <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <folding>
+            <marker date="1507002966780" expanded="true" signature="2122:2127" ph="{&quot;url&quot;: &quot;sw-base.js&quot;...}" />
+            <marker date="1507002966780" expanded="true" signature="2122:2712" ph="[...]" />
+            <marker date="1507002966780" expanded="true" signature="2131:2207" ph="{&quot;url&quot;: &quot;sw.js&quot;...}" />
+            <marker date="1507002966780" expanded="true" signature="2211:2307" ph="{&quot;url&quot;: &quot;workbox-sw.prod.v2.0.3.js&quot;...}" />
+            <marker date="1507002966780" expanded="true" signature="2311:2410" ph="{&quot;url&quot;: &quot;src/images/main-image-lg.jpg&quot;...}" />
+            <marker date="1507002966780" expanded="true" signature="2414:2513" ph="{&quot;url&quot;: &quot;src/images/main-image-sm.jpg&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/workbox-cli-config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="98" column="14" lean-forward="false" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
+        <state relative-caret-position="102">
+          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/src/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="108" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/sw-base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
           <folding />
         </state>
       </provider>

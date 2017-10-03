@@ -6,6 +6,14 @@ workboxSW.router.registerRoute(/.*(?:googleapis|gstatic)\.com.*$/, workboxSW.str
     cacheName: 'google-fonts'
 }))
 
+workboxSW.router.registerRoute('https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css', workboxSW.strategies.staleWhileRevalidate({
+    cacheName: 'material-css'
+}))
+
+workboxSW.router.registerRoute(/.*(?:firebasestorage\.googleapis)\.com.*$/, workboxSW.strategies.staleWhileRevalidate({
+    cacheName: 'post-images'
+}))
+
 workboxSW.precache([
   {
     "url": "404.html",
@@ -29,7 +37,7 @@ workboxSW.precache([
   },
   {
     "url": "service-worker.js",
-    "revision": "720b022dc43385ee376ffa0009ee20e1"
+    "revision": "7b1cf96f917dcacc76ab0f8e22eee2ee"
   },
   {
     "url": "src/css/app.css",
@@ -45,7 +53,7 @@ workboxSW.precache([
   },
   {
     "url": "src/js/app.js",
-    "revision": "6ff90fdfd827366ff79fa4e9085b0098"
+    "revision": "946bd3d97c378d1df9fe86d0db2ffaf9"
   },
   {
     "url": "src/js/feed.js",
@@ -73,7 +81,7 @@ workboxSW.precache([
   },
   {
     "url": "sw-base.js",
-    "revision": "30968e8d029ae214cb0cf6f4da8d9b80"
+    "revision": "17f8890422a5c495e26b9d5a8ead8e45"
   },
   {
     "url": "sw.js",
