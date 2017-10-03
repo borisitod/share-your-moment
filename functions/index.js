@@ -31,7 +31,7 @@ exports.storePostData = functions.https.onRequest(function (request, response) {
             fs.rename(files.file.path, '/tmp/' + files.file.name);
             var bucket = gcs.bucket('pwagram-49076.appspot.com');
 
-            bucket.upload('/tmp/' + file.file.name, {
+            bucket.upload('/tmp/' + files.file.name, {
                 uploadType: 'media',
                 metadata: {
                     metadata: {

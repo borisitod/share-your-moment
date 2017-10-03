@@ -41,17 +41,21 @@ function initializeMedia() {
         })
 }
 
-captureButton.addEventListener('click', function (event) {
+captureButton.addEventListener('click', function(event) {
     canvasElement.style.display = 'block';
     videoPlayer.style.display = 'none';
     captureButton.style.display = 'none';
     var context = canvasElement.getContext('2d');
     context.drawImage(videoPlayer, 0, 0, canvas.width, videoPlayer.videoHeight / (videoPlayer.videoWidth / canvas.width));
-    videoPlayer.srcObject.getVideoTracks().forEach(function (track) {
+    videoPlayer.srcObject.getVideoTracks().forEach(function(track) {
         track.stop();
     });
     picture = dataURItoBlob(canvasElement.toDataURL());
-})
+});
+
+imagePicker.addEventListener('change', function(event) {
+    picture = event.target.files[0];
+});
 
 
 function openCreatePostModal() {
@@ -180,10 +184,10 @@ if ('indexedDB' in window) {
 function sendData() {
     var id = new Date().toISOString();
     var postData = new FormData();
-    postData.append('id',   id);
-    postData.append('title',  titleInput.title);
-    postData.append('location',  locationInput.location);
-    postData.append('file',  picture, id + '.png');
+    postData.append('id', id);
+    postData.append('title', titleInput.value);
+    postData.append('location', locationInput.value);
+    postData.append('file', picture, id + '.png');
 
     fetch('https://us-central1-pwagram-49076.cloudfunctions.net/storePostData', {
         method: 'POST',
