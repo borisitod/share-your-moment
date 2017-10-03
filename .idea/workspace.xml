@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="279dd936-bc7c-4b5c-9bb9-4c8d34d74c7b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/service-worker.js" afterPath="$PROJECT_DIR$/public/service-worker.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sw-base.js" afterPath="$PROJECT_DIR$/public/sw-base.js" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -21,8 +22,8 @@
       <file leaf-file-name="sw.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/sw.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-799">
-              <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="83">
+              <caret line="82" column="26" lean-forward="false" selection-start-line="82" selection-start-column="26" selection-end-line="95" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -31,15 +32,15 @@
       <file leaf-file-name="service-worker.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/service-worker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+            <state relative-caret-position="204">
+              <caret line="48" column="3" lean-forward="true" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
               <folding>
-                <marker date="1507002966780" expanded="true" signature="2122:2127" ph="{&quot;url&quot;: &quot;sw-base.js&quot;...}" />
-                <marker date="1507002966780" expanded="true" signature="2122:2712" ph="[...]" />
-                <marker date="1507002966780" expanded="true" signature="2131:2207" ph="{&quot;url&quot;: &quot;sw.js&quot;...}" />
-                <marker date="1507002966780" expanded="true" signature="2211:2307" ph="{&quot;url&quot;: &quot;workbox-sw.prod.v2.0.3.js&quot;...}" />
-                <marker date="1507002966780" expanded="true" signature="2311:2410" ph="{&quot;url&quot;: &quot;src/images/main-image-lg.jpg&quot;...}" />
-                <marker date="1507002966780" expanded="true" signature="2414:2513" ph="{&quot;url&quot;: &quot;src/images/main-image-sm.jpg&quot;...}" />
+                <marker date="1507004001232" expanded="true" signature="2852:2857" ph="{&quot;url&quot;: &quot;sw-base.js&quot;...}" />
+                <marker date="1507004001232" expanded="true" signature="2852:3442" ph="[...]" />
+                <marker date="1507004001232" expanded="true" signature="2861:2937" ph="{&quot;url&quot;: &quot;sw.js&quot;...}" />
+                <marker date="1507004001232" expanded="true" signature="2941:3037" ph="{&quot;url&quot;: &quot;workbox-sw.prod.v2.0.3.js&quot;...}" />
+                <marker date="1507004001232" expanded="true" signature="3041:3140" ph="{&quot;url&quot;: &quot;src/images/main-image-lg.jpg&quot;...}" />
+                <marker date="1507004001232" expanded="true" signature="3144:3243" ph="{&quot;url&quot;: &quot;src/images/main-image-sm.jpg&quot;...}" />
               </folding>
             </state>
           </provider>
@@ -88,8 +89,8 @@
       <file leaf-file-name="sw-base.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/sw-base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+            <state relative-caret-position="372">
+              <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -261,23 +262,22 @@
       <workItem from="1506506772647" duration="1835000" />
       <workItem from="1506651310710" duration="823000" />
       <workItem from="1506818906391" duration="12345000" />
-      <workItem from="1506988526729" duration="9843000" />
+      <workItem from="1506988526729" duration="10514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68453000" />
+    <option name="totallyTimeSpent" value="69124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4919517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4919517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19479166" sideWeight="0.6038576" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -612,14 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/sw.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-799">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -640,15 +632,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/service-worker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+        <state relative-caret-position="204">
+          <caret line="48" column="3" lean-forward="true" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
           <folding>
-            <marker date="1507002966780" expanded="true" signature="2122:2127" ph="{&quot;url&quot;: &quot;sw-base.js&quot;...}" />
-            <marker date="1507002966780" expanded="true" signature="2122:2712" ph="[...]" />
-            <marker date="1507002966780" expanded="true" signature="2131:2207" ph="{&quot;url&quot;: &quot;sw.js&quot;...}" />
-            <marker date="1507002966780" expanded="true" signature="2211:2307" ph="{&quot;url&quot;: &quot;workbox-sw.prod.v2.0.3.js&quot;...}" />
-            <marker date="1507002966780" expanded="true" signature="2311:2410" ph="{&quot;url&quot;: &quot;src/images/main-image-lg.jpg&quot;...}" />
-            <marker date="1507002966780" expanded="true" signature="2414:2513" ph="{&quot;url&quot;: &quot;src/images/main-image-sm.jpg&quot;...}" />
+            <marker date="1507004001232" expanded="true" signature="2852:2857" ph="{&quot;url&quot;: &quot;sw-base.js&quot;...}" />
+            <marker date="1507004001232" expanded="true" signature="2852:3442" ph="[...]" />
+            <marker date="1507004001232" expanded="true" signature="2861:2937" ph="{&quot;url&quot;: &quot;sw.js&quot;...}" />
+            <marker date="1507004001232" expanded="true" signature="2941:3037" ph="{&quot;url&quot;: &quot;workbox-sw.prod.v2.0.3.js&quot;...}" />
+            <marker date="1507004001232" expanded="true" signature="3041:3140" ph="{&quot;url&quot;: &quot;src/images/main-image-lg.jpg&quot;...}" />
+            <marker date="1507004001232" expanded="true" signature="3144:3243" ph="{&quot;url&quot;: &quot;src/images/main-image-sm.jpg&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -677,10 +669,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/sw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="82" column="26" lean-forward="false" selection-start-line="82" selection-start-column="26" selection-end-line="95" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/sw-base.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        <state relative-caret-position="372">
+          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding />
         </state>
       </provider>

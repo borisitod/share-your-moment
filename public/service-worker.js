@@ -1,18 +1,41 @@
 importScripts('workbox-sw.prod.v2.0.3.js');
+importScripts('/src/js/idb.js');
+importScripts('/src/js/utility.js');
 
 const workboxSW = new self.WorkboxSW();
 
 workboxSW.router.registerRoute(/.*(?:googleapis|gstatic)\.com.*$/, workboxSW.strategies.staleWhileRevalidate({
-    cacheName: 'google-fonts'
-}))
+    cacheName: 'google-fonts',
+    cacheExpiration: {
+        maxEntries: 3,
+        maxAgeSeconds: 60 * 60 * 24 * 30
+    }
+}));
 
 workboxSW.router.registerRoute('https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css', workboxSW.strategies.staleWhileRevalidate({
     cacheName: 'material-css'
-}))
+}));
 
 workboxSW.router.registerRoute(/.*(?:firebasestorage\.googleapis)\.com.*$/, workboxSW.strategies.staleWhileRevalidate({
     cacheName: 'post-images'
-}))
+}));
+
+workboxSW.router.registerRoute('https://pwagram-49076.firebaseio.com/posts.json', function (args) {
+    return fetch(args.event.request)
+        .then(function (res) {
+            var clonedRes = res.clone();
+            clearAllData('posts')
+                .then(function () {
+                    return clonedRes.json()
+                })
+                .then(function (data) {
+                    for (var key in data) {
+                        writeData('posts', data[key])
+                    }
+                });
+            return res;
+        });
+});
 
 workboxSW.precache([
   {
@@ -37,7 +60,7 @@ workboxSW.precache([
   },
   {
     "url": "service-worker.js",
-    "revision": "7b1cf96f917dcacc76ab0f8e22eee2ee"
+    "revision": "774597742d6657dea685ab34baeddd95"
   },
   {
     "url": "src/css/app.css",
@@ -81,7 +104,7 @@ workboxSW.precache([
   },
   {
     "url": "sw-base.js",
-    "revision": "17f8890422a5c495e26b9d5a8ead8e45"
+    "revision": "906e3719b68504e5001d8fa020bd4919"
   },
   {
     "url": "sw.js",
