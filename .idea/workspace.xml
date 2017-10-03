@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="279dd936-bc7c-4b5c-9bb9-4c8d34d74c7b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/sw.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/help/index.html" afterPath="$PROJECT_DIR$/public/help/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/service-worker.js" afterPath="$PROJECT_DIR$/public/service-worker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sw-base.js" afterPath="$PROJECT_DIR$/public/sw-base.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workbox-cli-config.js" afterPath="$PROJECT_DIR$/workbox-cli-config.js" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -24,52 +19,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="service-worker.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="service-worker.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/service-worker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2467">
-              <caret line="75" column="3" lean-forward="false" selection-start-line="75" selection-start-column="3" selection-end-line="75" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workbox-cli-config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workbox-cli-config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="134" column="42" lean-forward="true" selection-start-line="134" selection-start-column="42" selection-end-line="134" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/help/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="1207">
+              <caret line="71" column="3" lean-forward="false" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="3" />
+              <folding>
+                <marker date="1507008343861" expanded="true" signature="2396:2410" ph="{&quot;url&quot;: &quot;404.html&quot;...}" />
+                <marker date="1507008343861" expanded="true" signature="2410:2478" ph="{&quot;url&quot;: &quot;favicon.ico&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,21 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sw-base.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/sw-base.js">
+      <file leaf-file-name="feed.min.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/src/js/feed.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="866">
-              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="feed.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/src/js/feed.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -222,6 +170,14 @@
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="feed.js" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="share-your-moment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="share-your-moment" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="promise.js" type="620a8d5e:NestingTreeNode" />
             </path>
           </expand>
@@ -274,23 +230,22 @@
       <workItem from="1506506772647" duration="1835000" />
       <workItem from="1506651310710" duration="823000" />
       <workItem from="1506818906391" duration="12345000" />
-      <workItem from="1506988526729" duration="12884000" />
+      <workItem from="1506988526729" duration="14976000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71494000" />
+    <option name="totallyTimeSpent" value="73586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4919517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4919517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19479166" sideWeight="0.6038576" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -317,13 +272,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/src/js/feed.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -611,24 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/workbox-sw.prod.v2.0.3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/src/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/sw.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
@@ -677,18 +607,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/workbox-sw.prod.v2.0.3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/workbox-cli-config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        <state relative-caret-position="204">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/service-worker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2467">
-          <caret line="75" column="3" lean-forward="false" selection-start-line="75" selection-start-column="3" selection-end-line="75" selection-end-column="3" />
+        <state relative-caret-position="1207">
+          <caret line="71" column="3" lean-forward="false" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="3" />
+          <folding>
+            <marker date="1507008343861" expanded="true" signature="2396:2410" ph="{&quot;url&quot;: &quot;404.html&quot;...}" />
+            <marker date="1507008343861" expanded="true" signature="2410:2478" ph="{&quot;url&quot;: &quot;favicon.ico&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/src/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/src/js/feed.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
