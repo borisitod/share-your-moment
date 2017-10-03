@@ -71,7 +71,7 @@ workboxSW.precache([
   },
   {
     "url": "index.html",
-    "revision": "2cc7aba7d52d2505be6be635b968fd8e"
+    "revision": "cd4ec6cd1b12b79f9792e8c638776e59"
   },
   {
     "url": "manifest.json",
@@ -83,11 +83,11 @@ workboxSW.precache([
   },
   {
     "url": "src/css/app.css",
-    "revision": "b664fe359aa85a4d346f51b0724475bd"
+    "revision": "ffed0d57e450481d115a3e1eaccfe002"
   },
   {
     "url": "src/css/feed.css",
-    "revision": "5a4eb8f7ecd60c3b21c0922129f0cb24"
+    "revision": "65754f2fbf58456a87da0cc0952b0d8e"
   },
   {
     "url": "src/css/help.css",
@@ -111,11 +111,11 @@ workboxSW.precache([
   },
   {
     "url": "src/js/app.min.js",
-    "revision": "420d1c952952985753def0b744f5fa19"
+    "revision": "79ce2f9476d47d787698647062b23c4c"
   },
   {
     "url": "src/js/feed.min.js",
-    "revision": "bdd740c049499a887812f61cc5856810"
+    "revision": "99b654bc5ee95fcb8fcf89bbf4640f75"
   },
   {
     "url": "src/js/fetch.min.js",
